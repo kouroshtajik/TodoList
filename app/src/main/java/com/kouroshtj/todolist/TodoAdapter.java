@@ -31,6 +31,24 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoViewHolder> {
             case 3:
                 holder.txtTodo.setText("num4");
                 break;
+            case 4:
+                holder.txtTodo.setText("num5");
+                break;
+            case 5:
+                holder.txtTodo.setText("num6");
+                break;
+            case 6:
+                holder.txtTodo.setText("num7");
+                break;
+            case 7:
+                holder.txtTodo.setText("num8");
+                break;
+            case 8:
+                holder.txtTodo.setText("num9");
+                break;
+            case 9:
+                holder.txtTodo.setText("num10");
+                break;
 
         }
 
@@ -38,6 +56,6 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 10;
     }
 }
