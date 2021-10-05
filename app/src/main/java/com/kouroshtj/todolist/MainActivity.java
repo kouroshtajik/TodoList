@@ -11,6 +11,9 @@ import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,11 +21,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //fetching data
+
+        DatabaseQueries database = new DatabaseQueries(MainActivity.this,"todolist",null,1);
+        List<String> todolist = database.getTask();
+
 
         RecyclerView recycler = findViewById(R.id.recycler);
         LinearLayoutManager manager = new LinearLayoutManager(MainActivity.this,RecyclerView.VERTICAL,false);
         recycler.setLayoutManager(manager);
-        TodoAdapter adapter = new TodoAdapter();
+        TodoAdapter adapter = new TodoAdapter(todolist);
         recycler.setAdapter(adapter);
 
         FloatingActionButton button = findViewById(R.id.addButton);

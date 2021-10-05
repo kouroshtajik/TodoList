@@ -7,7 +7,14 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TodoAdapter extends RecyclerView.Adapter<TodoViewHolder> {
+    List<String> todo;
+    public TodoAdapter(List<String> todolist){
+        todo = todolist;
+    }
     @NonNull
     @Override
     public TodoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -18,44 +25,11 @@ public class TodoAdapter extends RecyclerView.Adapter<TodoViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull TodoViewHolder holder, int position) {
-        switch (position) {
-            case 0:
-                holder.txtTodo.setText("num1");
-                break;
-            case 1:
-                holder.txtTodo.setText("num2");
-                break;
-            case 2:
-                holder.txtTodo.setText("num3");
-                break;
-            case 3:
-                holder.txtTodo.setText("num4");
-                break;
-            case 4:
-                holder.txtTodo.setText("num5");
-                break;
-            case 5:
-                holder.txtTodo.setText("num6");
-                break;
-            case 6:
-                holder.txtTodo.setText("num7");
-                break;
-            case 7:
-                holder.txtTodo.setText("num8");
-                break;
-            case 8:
-                holder.txtTodo.setText("num9");
-                break;
-            case 9:
-                holder.txtTodo.setText("num10");
-                break;
-
-        }
-
+        holder.txtTodo.setText(todo.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return todo.size();
     }
 }

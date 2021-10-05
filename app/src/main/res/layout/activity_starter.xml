@@ -4,24 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InputActivityDialog"
+    tools:context=".StarterActivity"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edtTitle"
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Title"/>
-    <EditText
-        android:id="@+id/edtDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Description"/>
+        android:text="Starter Page"
+        android:textSize="50dp"
+        android:textStyle="bold|italic"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"/>
     <Button
-        android:id="@+id/btnAdd"
+        android:id="@+id/btnStart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
-        android:textAllCaps="false"/>
+        android:text="Start"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
+    <Button
+        android:id="@+id/btnRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recycler"
+        android:layout_gravity="center"/>
+
+
 
 </LinearLayout>
